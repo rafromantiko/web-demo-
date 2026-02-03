@@ -1,111 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Cool Website</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
 
-        header {
-            background: #222;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        nav a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .container {
+      background: #ffffff;
+      width: 90%;
+      max-width: 900px;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
 
-        section {
-            padding: 40px;
-            max-width: 900px;
-            margin: auto;
-        }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+    header h1 {
+      color: #667eea;
+      font-size: 2.5rem;
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #222;
-            color: white;
-        }
+    header p {
+      margin-top: 10px;
+      color: #666;
+    }
 
-        button {
-            padding: 10px 20px;
-            border: none;
-            background: #007bff;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
 
-        button:hover {
-            background: #0056b3;
-        }
-    </style>
+    .card {
+      background: linear-gradient(135deg, #f5f7ff, #eef1ff);
+      border-radius: 14px;
+      padding: 25px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #764ba2;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    footer span {
+      color: #667eea;
+      font-weight: 600;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="container">
+    <header>
+      <h1>Welcome ✨</h1>
+      <p>A simple HTML website with a clean theme and nice colors</p>
+    </header>
 
-<header>
-    <h1>My Website</h1>
-    <p>Welcome to my first HTML website</p>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+    <section class="cards">
+      <div class="card">
+        <h3>Design</h3>
+        <p>Modern layout with smooth gradients and rounded corners.</p>
+      </div>
 
-<section id="about">
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-            Hi! This is a simple website made with HTML and CSS.
-            You can edit the text, colors, and layout however you like.
-        </p>
-    </div>
-</section>
+      <div class="card">
+        <h3>Responsive</h3>
+        <p>Looks good on phones, tablets, and desktops.</p>
+      </div>
 
-<section id="projects">
-    <div class="card">
-        <h2>Projects</h2>
-        <ul>
-            <li>Project One</li>
-            <li>Project Two</li>
-            <li>Project Three</li>
-        </ul>
-    </div>
-</section>
+      <div class="card">
+        <h3>Fast</h3>
+        <p>No frameworks. Just clean HTML & CSS.</p>
+      </div>
 
-<section id="contact">
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: example@email.com</p>
-        <button onclick="alert('Thanks for visiting!')">Say Hi</button>
-    </div>
-</section>
+      <div class="card">
+        <h3>Customizable</h3>
+        <p>Change colors, text, or layout easily.</p>
+      </div>
+    </section>
 
-<footer>
-    <p>© 2026 My Website</p>
-</footer>
-
+    <footer>
+      Made with ❤️ by <span>You</span>
+    </footer>
+  </div>
 </body>
 </html>
+
